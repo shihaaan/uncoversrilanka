@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A guide to Sri Lanka's history, places and culture.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Uncover Sri Lanka</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm reading column (max 1080px), a green hero band, and a to-scale timeline as the signature element. */
+:root {
+  --bg: #F4F8F5;
+  --surface: #FFFFFF;
+  --ink: #12241F;
+  --muted: #53655E;
+  --line: #D6E0DA;
+  --green: #0E5E4F;
+  --green-soft: #E0EEE8;
+  --on-green: #FFFFFF;
+  --saffron: #E9A21B;
+  --saffron-ink: #8F5A00;
+  --on-saffron: #2A1B00;
+  --maroon: #8A2433;
+  --maroon-soft: #F5E4E7;
+  --blue: #3E6C8F;
+  --grey: #9AAAA3;
+  --hero-bg: #0E5E4F;
+  --hero-ink: #FFFFFF;
+  --hero-muted: #CDE5DC;
+  --leaf: #EFE6CC;
+  --leaf-fibre: #E8DEC1;
+  --leaf-ink: #3A2F1A;
+  --leaf-line: #D6C79C;
+  --cord: #8A6B3A;
+  --hero-shade: rgba(7, 46, 39, 0.9);
+  --hero-shade2: rgba(7, 46, 39, 0.55);
+  --display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1A17; --surface: #15241F; --ink: #E8F0EC; --muted: #9DB0A8; --line: #2A3D36;
+    --green: #5CC2A8; --green-soft: #17332C; --on-green: #0E1A17;
+    --saffron: #F0AE3D; --saffron-ink: #F0AE3D; --on-saffron: #2A1B00;
+    --maroon: #EC98A4; --maroon-soft: #3A1E23; --blue: #7FB0D6; --grey: #6F827A;
+    --hero-bg: #123A31; --hero-ink: #EEF6F2; --hero-muted: #B5CFC6;
+    --leaf: #2C2A1E; --leaf-fibre: #322F22; --leaf-ink: #EDE3C6; --leaf-line: #4A4530; --cord: #B0915A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1A17; --surface: #15241F; --ink: #E8F0EC; --muted: #9DB0A8; --line: #2A3D36;
+  --green: #5CC2A8; --green-soft: #17332C; --on-green: #0E1A17;
+  --saffron: #F0AE3D; --saffron-ink: #F0AE3D; --on-saffron: #2A1B00;
+  --maroon: #EC98A4; --maroon-soft: #3A1E23; --blue: #7FB0D6; --grey: #6F827A;
+  --hero-bg: #123A31; --hero-ink: #EEF6F2; --hero-muted: #B5CFC6;
+    --leaf: #2C2A1E; --leaf-fibre: #322F22; --leaf-ink: #EDE3C6; --leaf-line: #4A4530; --cord: #B0915A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--green); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--saffron-ink); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; }
+h1:focus { outline: none; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+ul, ol { margin: 0; padding-left: 1.2em; }
+li + li { margin-top: 0.35em; }
+
+.wrap { max-width: 1080px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.stack { display: flex; flex-direction: column; gap: 1rem; }
+.prose { max-width: 66ch; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 60ch; }
+.label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* Header */
+.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-head .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 1.5rem; row-gap: 0.25rem; padding-block: 0.7rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+.brand .logo { height: 28px; width: auto; flex: none; }
+.nav { display: flex; gap: 0.25rem; overflow-x: auto; max-width: 100%; min-width: 0; }
+.nav a { white-space: nowrap; padding: 0.4rem 0.7rem; border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.98rem; }
+.nav a:hover { background: var(--green-soft); }
+.nav a[aria-current="page"] { background: var(--green); color: var(--on-green); }
+
+/* Hero */
+.hero { background: linear-gradient(100deg, var(--hero-shade), var(--hero-shade2)), url("img/hero.jpg") center / cover no-repeat, var(--hero-bg); color: var(--hero-ink); }
+.hero .credit { font-size: 0.78rem; color: var(--hero-muted); margin-top: 0.75rem; }
+.hero .credit a { color: inherit; }
+.hero .wrap { padding-block: clamp(2.5rem, 7vw, 4.5rem); display: flex; flex-direction: column; gap: 1.25rem; }
+.hero h1 { font-size: clamp(2.3rem, 6.5vw, 4.25rem); max-width: 16ch; }
+.hero p { color: var(--hero-muted); font-size: 1.2rem; max-width: 52ch; }
+.hero .label { color: var(--hero-muted); }
+.btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.btn { display: inline-block; padding: 0.7rem 1.2rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 2px solid transparent; }
+.btn-main { background: var(--saffron); color: var(--on-saffron); }
+.btn-ghost { border-color: var(--hero-muted); color: var(--hero-ink); }
+.btn-green { background: var(--green); color: var(--on-green); }
+
+/* Sections */
+.section { padding-block: clamp(2rem, 5vw, 3.25rem); }
+.section + .section { border-top: 1px solid var(--line); }
+.section > .wrap { display: flex; flex-direction: column; gap: 1.25rem; }
+.page-head { padding-block: clamp(1.75rem, 4vw, 2.75rem) 0.5rem; }
+.page-head .wrap { display: flex; flex-direction: column; gap: 0.75rem; }
+.back { font-size: 0.95rem; font-weight: 500; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+/* Timeline (to scale) */
+.tl { display: flex; flex-direction: column; gap: 0.35rem; }
+.tl-cap { font-size: 0.8rem; color: var(--muted); }
+.tl-row { position: relative; height: 30px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.tl-row.thin { height: 12px; }
+.tl-seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -1px 0 0 var(--bg); }
+.tl-seg:hover { filter: brightness(1.12); }
+.tl-ticks { position: relative; height: 1.6rem; font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tl-ticks span { position: absolute; top: 0.3rem; white-space: nowrap; transform: translateX(-50%); }
+.tl-ticks span.first { transform: none; }
+.tl-ticks span.last { transform: translateX(-100%); }
+
+/* Era list as palm-leaf manuscript strips threaded on a cord */
+.leaves { list-style: none; margin: 0; padding: 10px 0; position: relative; display: flex; flex-direction: column; gap: 10px; }
+.leaves::before, .leaves::after { content: ""; position: absolute; top: 0; bottom: 0; width: 2px; background: var(--cord); }
+.leaves::before { left: 10.25rem; }
+.leaves::after { right: 2rem; }
+.leaves li { margin: 0; position: relative; z-index: 1; }
+.leaf { position: relative; display: grid; grid-template-columns: 8rem minmax(0, 1fr); column-gap: 2.5rem; align-items: center; padding: 1rem 4rem 1rem 1rem; color: var(--leaf-ink); text-decoration: none; border: 1px solid var(--leaf-line); border-radius: 14px; background-color: var(--leaf); background-image: repeating-linear-gradient(0deg, transparent 0, transparent 7px, var(--leaf-fibre) 7px, var(--leaf-fibre) 8px); }
+.leaf:hover { border-color: var(--cord); }
+.leaf::before, .leaf::after { content: ""; position: absolute; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; background: radial-gradient(var(--cord) 0, var(--cord) 2px, var(--bg) 2.5px); box-shadow: 0 0 0 1px var(--leaf-line); }
+.leaf::before { left: calc(10.25rem - 5px); }
+.leaf::after { right: calc(2rem - 5px); }
+.leaf .when { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.leaf .n { display: flex; align-items: center; gap: 0.45rem; font-family: var(--display); font-size: 1.6rem; font-weight: 700; line-height: 1; }
+.leaf .n i { width: 10px; height: 10px; border-radius: 2px; }
+.leaf .what { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.leaf .cap { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+.leaf .nm { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.2; }
+.leaf .sm { font-size: 0.95rem; line-height: 1.45; }
+@media (max-width: 640px) {
+  .leaves::after, .leaf::after { display: none; }
+  .leaves::before { left: 1.15rem; }
+  .leaf::before { left: calc(1.15rem - 5px); }
+  .leaf { grid-template-columns: minmax(0, 1fr); padding: 0.9rem 1rem 0.9rem 2.6rem; align-items: start; }
+  .leaf .when { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 0.6rem; margin-bottom: 0.35rem; }
+  .leaf .n { font-size: 1.2rem; }
+}
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+.card { display: flex; flex-direction: column; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); min-width: 0; }
+.card:hover { border-color: var(--green); }
+.card .ph { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--green-soft); color: var(--green); font-weight: 600; }
+.card .bd { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; padding: 1rem 1.1rem 1.1rem; }
+.shot { margin: 0; max-width: 100%; }
+.shot img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; background: var(--green-soft); }
+.shot figcaption { margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted); }
+@media (max-width: 600px) { .shot img { aspect-ratio: 3 / 2; } }
+.card p { color: var(--muted); font-size: 0.97rem; }
+.card .meta { margin-top: auto; padding-top: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 999px; border: 1px solid transparent; }
+.chip.heritage { background: var(--maroon-soft); color: var(--maroon); }
+.chip.nature { background: var(--green-soft); color: var(--green); }
+.chip.unesco { border-color: var(--line); color: var(--muted); }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.filters button { font: inherit; font-size: 0.95rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.filters button:hover { border-color: var(--green); }
+.filters button[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: var(--on-green); }
+
+/* Facts */
+.facts { display: grid; grid-template-columns: minmax(7rem, max-content) minmax(0, 1fr); gap: 0.5rem 1.25rem; margin: 0; padding: 1.1rem 1.25rem; background: var(--green-soft); border-radius: 10px; max-width: 66ch; }
+.facts dt { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 0.2rem; }
+.facts dd { margin: 0; }
+@media (max-width: 480px) { .facts { grid-template-columns: 1fr; gap: 0.1rem; } .facts dd { margin-bottom: 0.6rem; } }
+
+/* Tradition vs evidence */
+.te { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.25rem; padding-block: 1.1rem; border-block: 1px solid var(--line); max-width: 66ch; }
+.te > div { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.te .label.t { color: var(--saffron-ink); }
+.te .label.e { color: var(--green); }
+.te p { font-size: 0.98rem; }
+
+.links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pill { padding: 0.35rem 0.85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.pill:hover { border-color: var(--green); }
+.prevnext { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 0.5rem; }
+.prevnext a { font-weight: 600; text-decoration: none; }
+.prevnext a:hover { text-decoration: underline; }
+
+.threads { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1.5rem 2rem; }
+.threads a { display: flex; flex-direction: column; gap: 0.3rem; text-decoration: none; color: var(--ink); min-width: 0; }
+.threads a p { color: var(--muted); font-size: 0.97rem; }
+.threads a:hover h3 { color: var(--green); text-decoration: underline; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 0.98rem; }
+th, td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+td:first-child { font-weight: 600; white-space: nowrap; }
+
+.gloss { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0.75rem 2rem; margin: 0; }
+.gloss div { min-width: 0; }
+.gloss dt { font-weight: 700; display: inline; }
+.gloss dd { margin: 0; display: inline; color: var(--muted); }
+
+.cta { background: var(--green-soft); }
+.cta .wrap { align-items: flex-start; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer .wrap { padding-block: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+@media (prefers-reduced-motion: no-preference) { .card, .nav a, .filters button, .pill { transition: border-color 0.15s, background-color 0.15s; } }
+</style>
+
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#home"><img class="logo" src="logo.png" alt="" width="158" height="271">Uncover Sri Lanka</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-k="home">Home</a>
+      <a href="#story" data-k="story">The Story</a>
+      <a href="#places" data-k="places">Places</a>
+      <a href="#culture" data-k="culture">Culture</a>
+      <a href="#visiting" data-k="visiting">Visiting</a>
+      <a href="#about" data-k="about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="app"></main>
+<footer>
+  <div class="wrap">
+    <span>Uncover Sri Lanka. An independent, non-commercial guide by <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">Shihan</a>.</span>
+    <span>Version 1 · Last reviewed 2026 · <a href="#about">Sources</a></span>
+  </div>
+</footer>
+
+<script>
+const ERAS = [
+  { id: "early", cap: "Before the kingdoms", name: "Early people and the chronicles", dates: "Prehistory to c. 377 BCE", start: -543, end: -377, color: "grey",
+    summary: "People have lived on the island for tens of thousands of years. Its written story begins with chronicles kept by Buddhist monks.",
+    facts: [["Dates", "Prehistory to c. 377 BCE"], ["Key sources", "The Dipavamsa and Mahavamsa chronicles; cave and settlement excavations"], ["Key figure", "Prince Vijaya, the legendary founder"]],
+    sections: [
+      ["The first islanders", ["Stone tools and human remains from caves such as Fa Hien and Batadombalena show that modern humans were living in Sri Lanka's rainforests more than 30,000 years ago. Archaeologists call these people Balangoda Man, after the town near early finds.", "The Vedda, the island's indigenous people, are widely regarded as descendants of these early hunter-gatherers. Small Vedda communities still live in the east and centre of the island."]],
+      ["The chronicles", ["Much of what is known about the early kings comes from two chronicles written in Pali by Buddhist monks: the Dipavamsa, from around the 4th century CE, and the Mahavamsa, from around the 5th or 6th century CE. Few countries have a continuous written record this old.", "They were written centuries after the events they describe, and from a Buddhist and Sinhalese point of view. Historians value them and read them alongside archaeology, inscriptions and South Indian sources."]],
+      ["From villages to a city", ["Excavations at Anuradhapura show an Iron Age settlement growing there from around 900 BCE, with farming, iron working, horses and cattle. By the time the chronicles name it a capital, people had lived on the site for centuries."]]
+    ],
+    note: { t: "The Mahavamsa says Prince Vijaya landed from northern India with 700 followers in 543 BCE, on the day the Buddha died, and founded the Sinhalese royal line.", e: "There is no archaeological proof of Vijaya himself. Language and settlement evidence does point to migration from northern India during the first millennium BCE, mixing with people already on the island." },
+    places: ["anuradhapura", "wilpattu"] },
+  { id: "anuradhapura", cap: "Capital: Anuradhapura", name: "Anuradhapura", dates: "c. 377 BCE to 1017 CE", start: -377, end: 1017, color: "green",
+    summary: "For about 1,400 years one city was the centre of the island. It became one of the great capitals of the Buddhist world.",
+    facts: [["Dates", "c. 377 BCE to 1017 CE"], ["Capital", "Anuradhapura"], ["Key figures", "Devanampiya Tissa, Dutugemunu, Mahasena, Kashyapa"], ["Known for", "Giant stupas, reservoirs and the arrival of Buddhism"]],
+    sections: [
+      ["A capital is founded", ["By tradition King Pandukabhaya made Anuradhapura his capital in 377 BCE. It stayed the seat of kings until the early 11th century, far longer than most capitals anywhere."]],
+      ["Buddhism arrives", ["In the 3rd century BCE the monk Mahinda, sent from the court of the Indian emperor Ashoka, met King Devanampiya Tissa at Mihintale. The king adopted Buddhism, and it has shaped the island's art, law and daily life ever since.", "Soon after, the nun Sanghamitta brought a cutting from the tree under which the Buddha reached enlightenment. That tree, the Sri Maha Bodhi, still grows in Anuradhapura. It is one of the oldest living trees with a recorded planting."]],
+      ["Builders on a huge scale", ["Kings marked their reigns with dagobas (stupas): solid brick domes that hold sacred relics. Dutugemunu, who ruled from 161 to 137 BCE, began the Ruwanwelisaya. The Jetavanaramaya, built under King Mahasena, stood about 122 metres tall. Apart from the great pyramids of Giza, almost nothing on earth was taller at the time."]],
+      ["Mastering water", ["Anuradhapura lies in the dry zone, where most rain falls in one short season. Engineers answered with tanks: man-made reservoirs linked by canals with very gentle gradients. Thousands of tanks made rice farming possible, and many are still in use."]],
+      ["The rock fortress and the fall", ["In the 5th century King Kashyapa seized the throne and built his palace on the rock of Sigiriya. Five centuries later, armies of the Chola empire of South India invaded. They sacked Anuradhapura in 993 and captured the last king in 1017."]]
+    ],
+    places: ["anuradhapura", "mihintale", "sigiriya", "dambulla", "minneriya"] },
+  { id: "polonnaruwa", cap: "Capital: Polonnaruwa", name: "Polonnaruwa", dates: "1017 to 1232", start: 1017, end: 1232, color: "saffron",
+    summary: "A shorter, brilliant chapter. A new capital rose beside a vast reservoir and left some of the island's finest stone carving.",
+    facts: [["Dates", "1017 to 1232"], ["Capital", "Polonnaruwa"], ["Key figures", "Vijayabahu I, Parakramabahu I, Nissanka Malla"], ["Known for", "The Gal Vihara and the Parakrama Samudra"]],
+    sections: [
+      ["Chola rule and liberation", ["The Cholas governed their new province from Polonnaruwa, which was easier to defend than Anuradhapura. In 1070, after years of campaigning from the south, Vijayabahu I drove them out. He kept Polonnaruwa as his capital."]],
+      ["Parakramabahu the Great", ["Parakramabahu I ruled from 1153 to 1186. He united the island and rebuilt it. His greatest work is the Parakrama Samudra, the Sea of Parakrama, a reservoir so large it looks like an inland sea. He is remembered for the principle that no drop of rain should reach the ocean without first serving people."]],
+      ["Two faiths in stone", ["Polonnaruwa's ruins show Buddhist and Hindu worship side by side. Shiva temples from the Chola years stand near Buddhist image houses. At the Gal Vihara, four Buddha figures were cut from a single granite face in the 12th century."]],
+      ["Decline", ["After Parakramabahu and Nissanka Malla the kingdom weakened through disputes over the throne. In 1215 an invader from India named Magha took the city. The court moved south-west, and the great irrigation works of the dry zone slowly fell out of use."]]
+    ],
+    places: ["polonnaruwa", "minneriya", "dambulla"] },
+  { id: "shifting", cap: "Capitals: Dambadeniya to Kotte", name: "The shifting kingdoms", dates: "1232 to 1597", start: 1232, end: 1597, color: "blue",
+    summary: "The court moved from one hill town and rock fortress to the next. A Tamil kingdom grew in the north, and traders arrived from across the Indian Ocean.",
+    facts: [["Dates", "1232 to 1597"], ["Capitals", "Dambadeniya, Yapahuwa, Kurunegala, Gampola, Kotte"], ["In the north", "Kingdom of Jaffna, 13th century to 1619"], ["Visitors", "Ibn Battuta in 1344; Zheng He in the early 1400s"]],
+    sections: [
+      ["A capital on the move", ["From 1232 Sinhalese kings ruled from a series of capitals, each further into the wetter south-west: Dambadeniya, Yapahuwa, Kurunegala, Gampola and finally Kotte, near modern Colombo. Historians link the move to invasion, the breakdown of the old irrigation system, disease and the pull of sea trade."]],
+      ["The kingdom of Jaffna", ["In the north a Tamil kingdom took shape in the 13th century, with its capital at Nallur. It lasted until the Portuguese conquered it in 1619. Its Hindu temples, language and culture are central to the island's Tamil heritage."]],
+      ["An Indian Ocean crossroads", ["Cinnamon, gems, pearls and elephants drew merchants from Arabia, India and China. The Moroccan traveller Ibn Battuta visited in 1344 and climbed Sri Pada. In 1409 the Chinese admiral Zheng He left a stone tablet at Galle, carved in Chinese, Tamil and Persian. It is now in the National Museum in Colombo."]],
+      ["Kotte and the first Europeans", ["Parakramabahu VI of Kotte, who came to the throne around 1412, was the last Sinhalese king to rule the whole island. In 1505 a Portuguese fleet arrived off the coast. In 1521 Kotte split between rival brothers, and the Portuguese used the divisions to take control of the lowlands."]]
+    ],
+    places: ["jaffna", "sri-pada", "galle-fort"] },
+  { id: "colonial", cap: "Colonial ports: Colombo and Galle", name: "The colonial era", dates: "1505 to 1948", start: 1505, end: 1948, color: "muted", row: 2,
+    summary: "Three European powers ruled the coasts in turn. Each left forts, faiths, laws, crops and communities that are still part of the island.",
+    facts: [["Portuguese", "1505 to 1658"], ["Dutch", "1658 to 1796"], ["British", "1796 to 1948"], ["Main exports", "Cinnamon, then coffee, then tea and rubber"]],
+    sections: [
+      ["The Portuguese", ["The Portuguese came for cinnamon and stayed for 150 years. They held the coastal lowlands, built the first forts and brought Roman Catholicism. Common Sri Lankan surnames such as Perera, Fernando and de Silva date from this time."]],
+      ["The Dutch", ["In 1638 the king of Kandy allied with the Dutch East India Company to drive the Portuguese out. The Dutch then kept the coast for themselves. They ran the cinnamon trade as a strict monopoly, dug canals and built the ramparts of Galle. Roman-Dutch law remains part of Sri Lanka's legal system."]],
+      ["The British", ["Britain took the Dutch territories in 1796 and made Ceylon a crown colony in 1802. After Kandy fell in 1815 it ruled the whole island, the first outside power ever to do so. English, railways and a plantation economy followed."]],
+      ["Coffee, then tea", ["Hill forests were cleared for coffee. From 1869 a leaf disease destroyed the crop, and planters turned to tea. James Taylor had planted the first commercial tea estate at Loolecondera in 1867. To work the estates the British brought Tamil labourers from South India, whose descendants still live in the hill country."]],
+      ["Towards self-rule", ["In 1931 Ceylon gained universal adult voting rights, among the first places in Asia to do so. Independence came peacefully on 4 February 1948.", "Burghers, people of mixed European and Sri Lankan descent, are a living legacy of all three colonial periods."]]
+    ],
+    places: ["galle-fort", "jaffna", "trincomalee", "nuwara-eliya", "ella", "south-coast"] },
+  { id: "kandy", cap: "Capital: Kandy", name: "Kandy, the last kingdom", dates: "1597 to 1815", start: 1597, end: 1815, color: "maroon",
+    summary: "While Europeans held the coast, a kingdom in the hills stayed independent for more than two centuries.",
+    facts: [["Dates", "Sole independent kingdom from the 1590s to 1815"], ["Capital", "Kandy, also called Senkadagala"], ["Key figures", "Vimaladharmasuriya I, Rajasinghe II, Kirti Sri Rajasinha, Sri Vikrama Rajasinha"], ["Ended", "Kandyan Convention, 2 March 1815"]],
+    sections: [
+      ["A fortress of hills", ["Kandy sits in a bowl of steep, forested mountains. Portuguese, Dutch and British armies all marched in and were worn down by ambush, disease and monsoon rain. Kandyan forces defeated the Portuguese at Danture in 1594 and at Gannoruwa in 1638."]],
+      ["The Tooth Relic", ["In the 1590s King Vimaladharmasuriya I brought the Buddha's Tooth Relic to Kandy. Whoever guarded the relic was seen as the rightful ruler, so the temple that houses it became the heart of the kingdom. It remains the most sacred Buddhist site in the country."]],
+      ["Diplomacy and revival", ["Kandyan kings played the European powers against each other, allying with the Dutch against the Portuguese. From 1739 the throne passed to the Nayakkar line, a dynasty with South Indian roots. In 1753 King Kirti Sri Rajasinha invited monks from Siam (Thailand) to restore the Buddhist order. He also gave the Esala Perahera procession the form it has today."]],
+      ["1815", ["The last king, Sri Vikrama Rajasinha, lost the support of his nobles. In 1815 they sided with the British, and the Kandyan Convention of 2 March handed the kingdom to the British crown. A rebellion in 1817 and 1818 was put down harshly. More than 2,000 years of island monarchy had ended."]]
+    ],
+    places: ["kandy", "sri-pada", "central-highlands"] },
+  { id: "independence", cap: "Capital: Colombo", name: "Independence and the republic", dates: "1948 to 1983", start: 1948, end: 1983, color: "green",
+    summary: "Ceylon became independent without a war. The decades that followed brought democracy, a new name and deepening divisions.",
+    facts: [["Independence", "4 February 1948, as the Dominion of Ceylon"], ["Republic", "22 May 1972, renamed Sri Lanka"], ["Capital", "Colombo; parliament moved to Sri Jayawardenepura Kotte in 1982"], ["Key figures", "D.S. Senanayake, S.W.R.D. Bandaranaike, Sirimavo Bandaranaike, J.R. Jayewardene"]],
+    sections: [
+      ["A peaceful handover", ["On 4 February 1948 Ceylon became a self-governing dominion within the Commonwealth, with D.S. Senanayake as its first prime minister. The Independence Memorial Hall in Colombo marks the event."]],
+      ["Language and citizenship", ["Early laws opened lasting wounds. The Ceylon Citizenship Act of 1948 left most hill-country Tamils of Indian origin without citizenship. In 1956 Sinhala was made the only official language, which shut many Tamil speakers out of government jobs. Protests and outbreaks of violence followed."]],
+      ["Firsts and upheavals", ["In 1960 Sirimavo Bandaranaike became the world's first woman prime minister. In 1971 a youth uprising in the south was crushed. In 1972 the country became a republic and took the name Sri Lanka. A new constitution in 1978 created a powerful executive presidency."]],
+      ["The road to war", ["Tamil political demands moved from equal rights towards a separate state, and armed groups formed in the north. The burning of the Jaffna Public Library in 1981 destroyed tens of thousands of books and manuscripts. In July 1983, after an ambush killed 13 soldiers, anti-Tamil riots swept the country. Many historians date the start of the civil war from that month."]]
+    ],
+    places: ["jaffna"] },
+  { id: "conflict", cap: "Capital: Sri Jayawardenepura Kotte", name: "Conflict and recovery", dates: "1983 to 2009", start: 1983, end: 2009, color: "saffron",
+    summary: "A 26-year civil war and a devastating tsunami marked these years. This page keeps to the main events and ends in 2009.",
+    facts: [["Civil war", "July 1983 to May 2009"], ["Main parties", "The Government of Sri Lanka and the Liberation Tigers of Tamil Eelam (LTTE)"], ["Tsunami", "26 December 2004"], ["Lives lost in the war", "Estimated by the UN at 80,000 to 100,000"]],
+    sections: [
+      ["The war", ["The war was fought mainly in the north and east between the Sri Lankan state and the LTTE, which wanted an independent Tamil homeland. It included open battles, suicide bombings, assassinations and long periods of displacement for civilians."]],
+      ["Attempts at peace", ["India sent a peacekeeping force from 1987 to 1990 under an accord with Sri Lanka. A ceasefire brokered by Norway in 2002 raised hopes and then broke down. In the same years a second uprising in the south, from 1987 to 1989, cost many more lives."]],
+      ["Every community suffered", ["Tamil civilians endured shelling, displacement and disappearances. Sinhalese and Muslim civilians were killed in bombings and attacks on villages, and in 1990 the LTTE expelled Muslims from the north. An honest account has to hold all of these experiences together."]],
+      ["The tsunami", ["On 26 December 2004 the Indian Ocean tsunami struck the east and south coasts. More than 30,000 people died in Sri Lanka and whole towns were swept away. Memorials stand along the coast road."]],
+      ["2009 and after", ["The war ended in May 2009 with the military defeat of the LTTE. The final months caused heavy civilian casualties, and accountability for them is still debated in Sri Lanka and abroad. With peace, the north and east reopened to travellers and the long work of rebuilding began."]]
+    ],
+    places: ["jaffna", "trincomalee", "east-coast"] }
+];
+
+const PLACES = [
+  { id: "anuradhapura", name: "Anuradhapura", group: "heritage", type: "Ancient city", region: "North Central Province", unesco: "World Heritage Site since 1982", eras: ["anuradhapura", "early"],
+    hook: "The island's first great capital, and still a living place of pilgrimage.",
+    story: ["Anuradhapura was the royal capital for about 1,400 years. Kings filled it with monasteries, palaces, reservoirs and some of the largest brick monuments ever built. After the Chola invasions it was abandoned to the jungle, then cleared and restored from the 19th century.", "It is not a museum. Pilgrims in white come every day to the Sri Maha Bodhi, the sacred fig tree grown from a cutting of the tree under which the Buddha reached enlightenment."],
+    see: ["Sri Maha Bodhi, the sacred Bodhi tree planted in the 3rd century BCE", "Ruwanwelisaya, the gleaming white dagoba begun by King Dutugemunu", "Jetavanaramaya and Abhayagiri, two enormous brick dagobas", "Kuttam Pokuna, the twin bathing ponds, and the carved moonstone doorsteps"],
+    visit: ["Allow a full day. The ruins are spread over a wide area, so a bicycle or vehicle helps.", "Start early. Stone paths get very hot by midday and shoes come off at every shrine. Socks are useful.", "Wear clothes that cover shoulders and knees. White is traditional but not required."],
+    respect: "This is an active sacred site. Remove shoes and hats at shrines, keep your voice low near the Bodhi tree, and never pose with your back to a Buddha statue.",
+    near: ["mihintale", "wilpattu", "sigiriya"] },
+  { id: "polonnaruwa", name: "Polonnaruwa", group: "heritage", type: "Medieval capital", region: "North Central Province", unesco: "World Heritage Site since 1982", eras: ["polonnaruwa"],
+    hook: "A compact royal city beside a reservoir the size of a small sea.",
+    story: ["Polonnaruwa was the capital from the 11th to the 13th century. Under Parakramabahu I it became a planned city of palaces, council halls, monasteries and gardens, all fed by the Parakrama Samudra reservoir.", "The ruins are better preserved and closer together than those of Anuradhapura, which makes the layout of a medieval Sri Lankan capital easy to picture."],
+    see: ["Gal Vihara, four Buddha figures carved from one granite outcrop", "The Quadrangle, with the circular Vatadage relic house", "The Royal Palace and the council chamber with its carved elephants and lions", "Shiva temples from the Chola period", "The Parakrama Samudra at sunset"],
+    visit: ["Allow most of a day. The site is flat and well suited to cycling.", "Go early or late in the day for cooler air and softer light on the carvings.", "Cover shoulders and knees. Shoes and hats come off at the image houses."],
+    respect: "The Buddha figures at the Gal Vihara are objects of worship. Photograph them facing the statue, not with your back to it.",
+    near: ["minneriya", "sigiriya", "dambulla"] },
+  { id: "sigiriya", name: "Sigiriya", group: "heritage", type: "Rock fortress", region: "Central Province", unesco: "World Heritage Site since 1982", eras: ["anuradhapura"],
+    hook: "A king's palace on top of a 200-metre rock, with gardens laid out below.",
+    story: ["In the 5th century King Kashyapa took the throne from his father and, fearing his brother's revenge, moved his court to this isolated rock. He built a palace on the summit and one of the oldest landscaped gardens in the world at its foot.", "After Kashyapa's death in 495 the site became a monastery. Visitors over the next thousand years scratched poems onto the polished Mirror Wall, and many can still be read."],
+    see: ["The water gardens, with pools and fountains that still work after rain", "The frescoes of women painted in a sheltered pocket of the rock", "The Mirror Wall and its ancient graffiti", "The Lion's Paws, the remains of a giant brick lion that guarded the last staircase", "The summit, with palace foundations and views in every direction"],
+    visit: ["Allow two to three hours. The climb is about 1,200 steps.", "Start as early as you can. It is cooler, quieter and less windy.", "Carry water. The upper stairs are exposed and can be hard for people who dislike heights."],
+    near: ["dambulla", "minneriya", "polonnaruwa"] },
+  { id: "dambulla", name: "Dambulla Cave Temple", group: "heritage", type: "Cave temple", region: "Central Province", unesco: "World Heritage Site since 1991", eras: ["anuradhapura", "polonnaruwa", "kandy"],
+    hook: "Five painted caves that have been a place of worship for over 2,000 years.",
+    story: ["In the 1st century BCE King Valagamba was driven from Anuradhapura and sheltered in these caves. When he won back his throne he turned them into a temple. Later kings, especially those of Kandy, added statues and repainted the ceilings.", "The caves hold more than 150 Buddha statues. Murals cover the rock overhead so completely that the ceiling looks like draped cloth."],
+    see: ["The Cave of the Great Kings, the largest and most richly painted", "A 14-metre reclining Buddha cut from the living rock", "Ceiling murals that follow every curve of the stone", "Views across the plain towards Sigiriya from the terrace"],
+    visit: ["Allow one to two hours, including a steady uphill walk to the caves.", "Morning or late afternoon is cooler for the climb.", "Shoulders and knees must be covered. Shoes are left at the entrance."],
+    respect: "The caves are a working temple. Remove shoes and hats, speak quietly, and do not pose with your back to a statue.",
+    near: ["sigiriya", "kandy", "minneriya"] },
+  { id: "kandy", name: "Kandy", group: "heritage", type: "Sacred city", region: "Central Province", unesco: "World Heritage Site since 1988", eras: ["kandy", "colonial"],
+    hook: "The last royal capital, built around a lake and the Temple of the Tooth.",
+    story: ["Kandy was the capital of the last independent kingdom, which held out against European powers until 1815. Its heart is the Sri Dalada Maligawa, the temple that houses the Buddha's Tooth Relic.", "The lake in the centre of town was created by the last king in 1807. Each year the Esala Perahera fills the streets with drummers, dancers and decorated elephants in honour of the relic."],
+    see: ["The Temple of the Tooth, especially during the daily offering ceremonies", "Kandy Lake and the walk around its edge", "The Royal Botanic Gardens at Peradeniya, once a royal pleasure garden", "The old town streets, with Kandyan and British-era buildings side by side"],
+    visit: ["Allow one to two days. Kandy is also the gateway to the hill country.", "Visit the temple at an offering time to hear the drums and see the inner shrine opened.", "The city is cooler than the coast. Evenings can be fresh."],
+    respect: "At the Temple of the Tooth, cover shoulders and knees, remove shoes and hats, and carry flowers in both hands if you make an offering.",
+    near: ["dambulla", "nuwara-eliya", "central-highlands"] },
+  { id: "galle-fort", name: "Galle Fort", group: "heritage", type: "Fortified town", region: "Southern Province", unesco: "World Heritage Site since 1988", eras: ["colonial", "shifting"],
+    hook: "A walled colonial town on a headland, still lived in after 400 years.",
+    story: ["Galle was a trading port long before Europeans arrived. The Portuguese built the first fort here in the late 16th century. The Dutch took it in 1640 and built most of the ramparts, streets and warehouses seen today.", "It is the best-preserved European-built fortified town in South Asia. People still live, pray and go to school inside the walls."],
+    see: ["The ramparts, best walked in the hour before sunset", "The lighthouse and the bastions facing the open sea", "The Dutch Reformed Church of 1755, its floor paved with gravestones", "The mosque, churches and temples that share a few narrow streets"],
+    visit: ["Allow half a day to a full day. Everything inside the walls is walkable.", "Midday is hot and there is little shade on the ramparts.", "Galle sits on the south coast, so it combines well with the beaches nearby."],
+    near: ["south-coast", "whale-watching", "sinharaja"] },
+  { id: "mihintale", name: "Mihintale", group: "heritage", type: "Sacred mountain", region: "North Central Province", unesco: "", eras: ["anuradhapura"],
+    hook: "The hill where Buddhism is said to have first been taught on the island.",
+    story: ["By tradition it was here, in the 3rd century BCE, that the monk Mahinda met King Devanampiya Tissa out hunting and taught him the Buddha's message. The hill became a great monastery.", "Among the ruins at its foot are the remains of a hospital from around the 9th century, with a stone bath shaped to hold a patient lying in medicinal oil."],
+    see: ["The broad stone stairway of 1,840 steps shaded by frangipani trees", "Ambasthala Dagoba, marking the meeting place of monk and king", "Aradhana Gala, the bare rock summit with wide views", "The ruins of the monks' refectory and the ancient hospital"],
+    visit: ["Allow two to three hours. It is a short drive from Anuradhapura.", "Climb early or late. The upper rock is exposed to the sun.", "On the full moon of June, called Poson, huge crowds of pilgrims gather here."],
+    respect: "Shoes and hats come off for the upper terraces. Dress modestly and give way to pilgrims on the steps.",
+    near: ["anuradhapura", "wilpattu"] },
+  { id: "jaffna", name: "Jaffna", group: "heritage", type: "Historic city", region: "Northern Province", unesco: "", eras: ["shifting", "colonial", "independence", "conflict"],
+    hook: "The centre of Tamil culture on the island, with a history all its own.",
+    story: ["Jaffna was the seat of a Tamil kingdom from the 13th century until the Portuguese conquest of 1619. The Dutch and British followed, leaving a great star-shaped fort.", "The city was at the centre of the civil war and was cut off for years. It has rebuilt steadily since 2009. Its temples, food and landscape of palmyra palms and lagoons feel distinct from the south."],
+    see: ["Nallur Kandaswamy Kovil, the city's great Hindu temple, in its present form since 1734", "Jaffna Fort, begun by the Portuguese and enlarged by the Dutch", "The Jaffna Public Library, rebuilt after it was burned in 1981", "The causeways and ferries to the islands, including the shrines of Nainativu"],
+    visit: ["Allow two to three days. Distances in the peninsula are short.", "The north is hot and dry for much of the year. Plan outdoor visits for early and late in the day.", "Try the local cooking, which is known for crab curry and its own roasted spice blends."],
+    respect: "At Hindu temples remove shoes, and men are usually asked to remove shirts before entering. Dress modestly and ask before taking photographs.",
+    near: ["trincomalee", "anuradhapura"] },
+  { id: "trincomalee", name: "Trincomalee", group: "heritage", type: "Harbour town", region: "Eastern Province", unesco: "", eras: ["colonial", "conflict"],
+    hook: "A clifftop temple above one of the world's great natural harbours.",
+    story: ["Trincomalee's deep, sheltered harbour has drawn sailors for more than 2,000 years. On the headland above it stands Koneswaram, a temple to Shiva with ancient origins.", "The Portuguese destroyed the old temple in the 1620s and used its stone for a fort, later named Fort Frederick. The present temple was built in the 20th century. Dutch, French and British fleets all fought for the harbour."],
+    see: ["Koneswaram temple on Swami Rock, with the sea far below", "Fort Frederick, where spotted deer wander among the old walls", "The harbour itself, seen from the hills around town", "The hot springs at Kanniya"],
+    visit: ["Allow one to two days, more if you add the beaches to the north.", "The east coast is at its best roughly from May to September.", "It pairs naturally with the beaches at Nilaveli and with whale watching."],
+    respect: "Koneswaram is an active Hindu temple. Remove shoes, dress modestly and follow any guidance from temple staff.",
+    near: ["east-coast", "whale-watching", "jaffna"] },
+  { id: "sri-pada", name: "Sri Pada (Adam's Peak)", group: "heritage", type: "Sacred mountain", region: "Central and Sabaragamuwa Provinces", unesco: "Lies within the Central Highlands World Heritage Site", eras: ["shifting", "kandy"],
+    hook: "One summit, one footprint, and four faiths that hold it sacred.",
+    story: ["Near the top of this 2,243-metre cone is a hollow in the rock shaped like a footprint. Buddhists believe it was left by the Buddha, Hindus by Shiva, and many Muslims and Christians by Adam.", "Pilgrims have climbed it for at least a thousand years. The traveller Ibn Battuta described his ascent in 1344. People of every faith still make the climb together, usually through the night."],
+    see: ["The stairway of more than 5,000 steps, lit through the pilgrimage season", "Sunrise from the summit", "The shadow of the peak, a perfect triangle cast across the morning mist", "The forest of the Peak Wilderness around the mountain"],
+    visit: ["The pilgrimage season runs from the December full moon to the May full moon. Outside it the path is quiet, often wet and unlit.", "Most people start around 2 am to reach the top for sunrise. Allow five to seven hours up and down.", "It is cold and windy at the summit. Bring warm layers."],
+    respect: "This is a pilgrimage first and a hike second. Dress modestly, remove shoes at the summit shrine, and greet fellow climbers kindly. Many are elderly or barefoot.",
+    near: ["central-highlands", "nuwara-eliya", "kandy"] },
+  { id: "central-highlands", name: "Central Highlands", group: "nature", type: "Mountains and cloud forest", region: "Central Province", unesco: "World Heritage Site since 2010", eras: ["colonial", "kandy"],
+    hook: "Misty plateaus, cloud forest and the cliff edge called World's End.",
+    story: ["The highlands are the source of nearly all the island's major rivers. Three protected areas make up the World Heritage Site: Horton Plains, the Knuckles range and the Peak Wilderness.", "Horton Plains is named after a British governor of the 1830s. The forests shelter animals found nowhere else, including the Sri Lankan leopard and the purple-faced langur."],
+    see: ["World's End, where the plateau drops away for roughly 870 metres", "Baker's Falls and the open grassland of Horton Plains", "The folded ridges of the Knuckles range, named for their shape like a fist", "Cloud forest hung with moss and lichen"],
+    visit: ["Reach Horton Plains at dawn. Cloud usually fills the view at World's End by mid-morning.", "The circular walk takes about three hours on rough but mostly level ground.", "It can be near freezing at sunrise. Bring warm and waterproof layers."],
+    near: ["nuwara-eliya", "ella", "sri-pada"] },
+  { id: "sinharaja", name: "Sinharaja Forest", group: "nature", type: "Rainforest", region: "Sabaragamuwa and Southern Provinces", unesco: "World Heritage Site since 1988", eras: ["early"],
+    hook: "The island's last great lowland rainforest, dense with life found nowhere else.",
+    story: ["Sinharaja means lion kingdom. It is the country's last large area of primary lowland rainforest, a remnant of the forest that once covered the wet south-west.", "More than half of its trees are found only in Sri Lanka, along with many of its birds, frogs, lizards and butterflies."],
+    see: ["Mixed flocks of birds moving through the canopy together", "Giant trees, tree ferns and forest streams", "Endemic species such as the Sri Lanka blue magpie", "Small waterfalls and natural pools"],
+    visit: ["Visits are on foot with a local guide. Allow at least half a day.", "It rains often. Paths can be muddy and leeches are common, so long socks help.", "Mornings are best for birds."],
+    near: ["galle-fort", "south-coast", "udawalawe"] },
+  { id: "ella", name: "Ella", group: "nature", type: "Hill country", region: "Uva Province", unesco: "", eras: ["colonial"],
+    hook: "A small hill town of tea slopes, viewpoints and a famous railway bridge.",
+    story: ["Ella sits at a gap in the hills where the land falls away towards the south coast. The British pushed the railway through here to carry tea down to Colombo.", "The Nine Arch Bridge, finished in 1921, was by popular account built of stone and brick without steel. The train ride from Kandy to Ella is often called one of the most beautiful in the world."],
+    see: ["The Nine Arch Bridge, especially when a train crosses", "Little Adam's Peak, a short walk to a wide view", "Ella Rock, a longer climb above the valley", "Ravana Falls, linked by legend to the Ramayana"],
+    visit: ["Allow two days. The main walks start from the town.", "Mornings are usually clear, and cloud often builds in the afternoon.", "Arrive by train if you can. The journey is part of the experience."],
+    near: ["nuwara-eliya", "central-highlands", "udawalawe"] },
+  { id: "nuwara-eliya", name: "Nuwara Eliya", group: "nature", type: "Hill country", region: "Central Province", unesco: "", eras: ["colonial"],
+    hook: "A cool hill station at the heart of tea country.",
+    story: ["At nearly 1,900 metres, Nuwara Eliya is the highest town on the island. The British developed it from the 1820s as a retreat from the lowland heat and built it to look like home, with gabled houses, a racecourse and rose gardens.", "The hills around it became the centre of the tea industry. They remain home to the hill-country Tamil community, whose ancestors were brought from South India to work the estates."],
+    see: ["Tea estates stepping across the slopes, with pickers at work", "Colonial-era buildings around the town centre", "Gregory Lake and Hakgala Botanical Garden", "Views of Pidurutalagala, the island's highest peak at 2,524 metres"],
+    visit: ["Allow one to two days. It is the usual base for Horton Plains.", "Bring a jumper. Nights are cold by Sri Lankan standards.", "A visit to a working tea factory explains how leaf becomes tea."],
+    near: ["central-highlands", "ella", "kandy"] },
+  { id: "minneriya", name: "Minneriya", group: "nature", type: "Wildlife", region: "North Central Province", unesco: "", eras: ["anuradhapura", "polonnaruwa"],
+    hook: "Wild elephants gathering at a reservoir built by a king 1,700 years ago.",
+    story: ["King Mahasena built the Minneriya tank in the 3rd century CE. The achievement so impressed his people that he was later worshipped as a god.", "In the dry season the water shrinks and fresh grass grows on the exposed bed. Elephants arrive from across the region to feed. The event is known as the Gathering and is often described as the largest meeting of Asian elephants anywhere."],
+    see: ["Herds of elephants on the open lake bed, sometimes in the hundreds", "Calves playing at the water's edge", "Water birds, deer and the occasional crocodile", "The ancient reservoir itself, still storing water for rice fields"],
+    visit: ["The Gathering happens in the dry season, broadly from July to October.", "Visits are by jeep, usually in the late afternoon. Allow about three hours.", "It sits between Sigiriya and Polonnaruwa, so it fits easily into a Cultural Triangle trip."],
+    near: ["sigiriya", "polonnaruwa", "dambulla"] },
+  { id: "yala", name: "Yala", group: "nature", type: "Wildlife", region: "Southern and Uva Provinces", unesco: "", eras: ["anuradhapura"],
+    hook: "Leopard country, with ancient monastery ruins among the scrub.",
+    story: ["Yala lies in what was once the southern kingdom of Ruhuna. Rock monasteries and old reservoirs show that this dry forest supported a large population 2,000 years ago.", "It became a national park in 1938. Parts of it have one of the highest densities of leopards recorded anywhere."],
+    see: ["Leopards, most often seen resting on rocks or in trees", "Elephants, sloth bears, crocodiles and peacocks", "Sithulpawwa, a rock monastery more than 2,000 years old", "Lagoons and a wild stretch of coast"],
+    visit: ["Visits are by jeep at dawn or in the late afternoon. Allow half a day.", "The dry months, when animals gather at waterholes, are usually best.", "The park normally closes for a few weeks each year. Check official sources before planning."],
+    near: ["udawalawe", "ella", "south-coast"] },
+  { id: "udawalawe", name: "Udawalawe", group: "nature", type: "Wildlife", region: "Sabaragamuwa and Uva Provinces", unesco: "", eras: ["independence"],
+    hook: "Open grassland where elephants can be seen all year round.",
+    story: ["Udawalawe National Park was created in 1972 to protect the catchment of a new reservoir and to shelter animals displaced by it. It is a modern echo of the ancient tanks that drew wildlife to water.", "Its open landscape makes it one of the most reliable places in Asia to watch wild elephants."],
+    see: ["Elephant herds on the grassland and at the reservoir's edge", "Water buffalo, deer, crocodiles and birds of prey", "The Elephant Transit Home nearby, where orphaned calves are raised for release"],
+    visit: ["Elephants are seen in every season. Early morning and late afternoon are best.", "Allow half a day. Visits are by jeep.", "It lies on the route between the hill country and the south coast."],
+    near: ["yala", "ella", "sinharaja"] },
+  { id: "wilpattu", name: "Wilpattu", group: "nature", type: "Wildlife", region: "North Western and North Central Provinces", unesco: "", eras: ["early"],
+    hook: "The largest national park, a quiet forest dotted with natural lakes.",
+    story: ["Wilpattu is named for its villus, shallow rain-fed lakes scattered through dense forest. It is the country's largest national park and was closed for long stretches during the war.", "Its coast has a place in legend. The chronicles say Prince Vijaya landed near here and met Kuveni, a queen of the island's earlier people."],
+    see: ["Leopards and sloth bears, with far fewer vehicles than other parks", "The villus, ringed with white sand and crowded with birds", "Kudiramalai Point on the coast, linked to the Vijaya legend"],
+    visit: ["Allow a full day. Distances inside the park are long.", "Wildlife is more thinly spread than in Yala, so patience is rewarded.", "It is close to Anuradhapura and combines well with it."],
+    near: ["anuradhapura", "mihintale"] },
+  { id: "south-coast", name: "South coast beaches", group: "nature", type: "Beaches", region: "Southern Province", unesco: "", eras: ["colonial"],
+    hook: "Palm-lined bays from Unawatuna to Tangalle, with Galle Fort close by.",
+    story: ["This coast was a stop on the sea routes between Arabia and China for centuries. Galle, Weligama and Matara were all trading ports before they were beach towns.", "The shoreline runs from sheltered coves to long empty beaches. Fishermen along parts of it still fish from stilts set in the shallows."],
+    see: ["Unawatuna, a curved, sheltered bay near Galle", "Mirissa, a crescent beach and a starting point for whale watching", "Tangalle, with long quiet beaches and rocky coves", "Sea turtles, which nest on several beaches along this coast"],
+    visit: ["The south and west coasts are at their best roughly from November to April.", "The sea can be rough outside those months. Ask locally before swimming.", "Away from the beach, cover up in towns and villages."],
+    near: ["galle-fort", "whale-watching", "yala"] },
+  { id: "east-coast", name: "East coast beaches", group: "nature", type: "Beaches", region: "Eastern Province", unesco: "", eras: ["conflict"],
+    hook: "Calm bays and surf breaks that come into season when the south is wet.",
+    story: ["The east coast was largely closed to visitors during the war and was hit hard by the 2004 tsunami. Since 2009 it has reopened.", "It is home to Tamil, Muslim and Sinhalese communities living side by side. The beaches are wide, the water is shallow in many bays, and the pace is slower than in the south."],
+    see: ["Arugam Bay, known for its long surf break", "Pasikudah, a broad bay with shallow, calm water", "Nilaveli and Uppuveli, north of Trincomalee", "Pigeon Island, with coral reefs offshore"],
+    visit: ["The east coast is at its best roughly from May to September.", "It is a long drive from Colombo. Combine it with the Cultural Triangle or the hill country.", "Dress modestly away from the beach. Many communities here are conservative."],
+    near: ["trincomalee", "whale-watching", "polonnaruwa"] },
+  { id: "whale-watching", name: "Whale watching", group: "nature", type: "Ocean", region: "South and east coasts", unesco: "", eras: ["shifting"],
+    hook: "Blue whales, the largest animals that have ever lived, close to shore.",
+    story: ["South of Dondra Head the seabed drops away steeply, bringing deep water close to land. Blue whales and sperm whales feed here, in the same waters that trading ships have crossed for 2,000 years.", "Sri Lanka is one of the few places where blue whales can be seen so near the coast."],
+    see: ["Blue whales and sperm whales", "Large schools of spinner dolphins", "Flying fish and seabirds", "The coastline from the sea, as arriving sailors once saw it"],
+    visit: ["Off the south coast the season is roughly November to April. Off Trincomalee it is roughly May to September.", "Trips leave at dawn and last several hours. The sea can be rough.", "Choose a boat that keeps its distance and does not chase the animals."],
+    near: ["south-coast", "trincomalee", "galle-fort"] }
+];
+
+const GLOSSARY = [
+  ["Tank (wewa)", "A man-made reservoir. Ancient tanks still water the dry zone's rice fields."],
+  ["Dagoba", "A dome-shaped monument holding Buddhist relics. Also called a stupa."],
+  ["Vihara", "A Buddhist temple or monastery."],
+  ["Kovil", "A Hindu temple in the Tamil tradition."],
+  ["Devale", "A shrine to a deity, often found beside a Buddhist temple."],
+  ["Bodhi tree", "A sacred fig, honoured because the Buddha reached enlightenment beneath one."],
+  ["Moonstone", "A carved semicircular stone step at the entrance to a shrine."],
+  ["Poya", "A full-moon day. Each one is a Buddhist holy day and a public holiday."],
+  ["Perahera", "A religious procession with drummers, dancers and sometimes elephants."],
+  ["Villu", "A shallow natural lake fed by rain."]
+];
+
+const U = "https://unsplash.com/photos/";
+const PHOTOS = {
+  "hero": ["Erik Esly", "lush-green-tea-plantation-on-a-misty-hillside-ZWdrM9IBBIE", "Tea fields near Nuwara Eliya"],
+  "anuradhapura": ["Rathna Deepaya", "a-large-white-building-with-a-dome-with-anuradhapura-in-the-background-0p8VDn7A5N8", "The white dome of the Ruwanwelisaya dagoba under a blue sky"],
+  "polonnaruwa": ["Hendrik Cornelissen", "photo-of-concrete-temple-lTC-4cz8whA", "Tall brick ruins of a Polonnaruwa image house with the sun behind them"],
+  "sigiriya": ["Dylan Shaw", "sigiriya-rock-fortress-in-sri-lanka-smUAKwMT8XA", "Sigiriya rock rising above the forest, seen from the air"],
+  "dambulla": ["Vedanth Ravi", "row-of-golden-buddha-statues-in-a-dimly-lit-cave-QxaWoVgvi4I", "A row of golden Buddha statues inside a Dambulla cave"],
+  "kandy": ["Chathura Anuradha Subasinghe", "a-white-building-with-a-gold-roof-with-temple-of-the-tooth-in-the-background-40uQmE9Zq8g", "The Temple of the Tooth in Kandy with its white walls and golden roof"],
+  "galle-fort": ["Polina Kneis", "EzFO-hHImBo", "The grassy ramparts and stone clock tower of Galle Fort, with people walking along the walls"],
+  "mihintale": ["Dimath Dayananda", "a-flag-flying-in-front-of-a-large-rock-formation-6qLCVonxxEg", "Buddhist flags and a white dagoba below the rock at Mihintale", "center 75%"],
+  "jaffna": ["Sithula Hirudaya", "a-large-white-and-gold-building-with-a-clock-tower-ktMbEL0lRQ8", "The ornate gateway towers of Nallur Kandaswamy Kovil in Jaffna"],
+  "trincomalee": ["Tharukshaan Kumaravel", "a-person-standing-on-a-rock-near-the-ocean-_dU0DzRT4_Q", "Waves breaking against dark rocks on the Trincomalee coast"],
+  "sri-pada": ["Vlada", "_HWLDHkn8fI", "The green summit of Sri Pada with the shrine on top, under a deep blue sky with drifting cloud"],
+  "central-highlands": ["Eddy Billard", "high-angle-photography-of-mountain-range-9PiYv6w0TsI", "The view from World's End across misty ridges in Horton Plains"],
+  "sinharaja": ["Thuva Shan", "man-bathes-under-a-majestic-waterfall-in-nature-qE1CGxnuQLo", "A waterfall and rock pools in the Sinharaja forest", "center 35%"],
+  "ella": ["Mona Miller", "a-train-traveling-over-a-bridge-in-the-middle-of-a-forest-BZeH-bgDjks", "A train crossing the Nine Arch Bridge among green hills", "center 60%"],
+  "nuwara-eliya": ["Subodha Karunarathne", "green-grass-field-near-body-of-water-under-blue-sky-during-daytime-PuWCoG8WHok", "A lake and green lawns under a blue morning sky in Nuwara Eliya"],
+  "minneriya": ["Lauren Dolding", "", "A wild elephant grazing on the grassy bed of a reservoir, with water and hills behind", "center 55%", "", "pexels"],
+  "yala": ["Geoff Brooks", "a-large-leopard-walking-across-a-dirt-field-3TwThGdEUZA", "A leopard walking across open ground in Yala"],
+  "udawalawe": ["Sachindra Chalaka", "a-couple-of-elephants-standing-on-top-of-a-lush-green-field-FqHXi2JQIwE", "An elephant and calf on the grassland at Udawalawe"],
+  "wilpattu": ["Udara Karunarathna", "PPGM2ZpCrzc", "A leopard drinking at the edge of a pool in Wilpattu"],
+  "south-coast": ["Zoshua Colah", "tropical-island-with-palm-tree-and-people-on-beach-kPG1IC9rjQY", "Parrot Rock and turquoise water at Mirissa beach"],
+  "east-coast": ["Tomáš Malík", "FHAHnF9C0Sw", "Fishing boats lined up on the sand at Arugam Bay, seen from above"],
+  "whale-watching": ["Mike Doherty", "whale-tail-in-the-middle-of-ocean-larQY4lhbT4", "A whale breaching from a grey sea", "", "Illustrative image. Location not confirmed."]
+};
+const credit = id => { const f = PHOTOS[id]; if (f[5] === "pexels") return `Photo by ${f[0]} on <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>`; return `Photo by <a href="${U}${f[1]}" target="_blank" rel="noopener">${f[0]}</a> on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>`; };
+const fit = id => PHOTOS[id][3] ? ` style="object-position:${PHOTOS[id][3]}"` : "";
+
+const era = id => ERAS.find(e => e.id === id);
+const place = id => PLACES.find(p => p.id === id);
+const T0 = -543, T1 = 2009, SPAN = T1 - T0;
+const pos = y => ((y - T0) / SPAN * 100).toFixed(2);
+
+function timeline() {
+  const seg = e => `<a class="tl-seg" href="#era-${e.id}" style="left:${pos(e.start)}%;width:${((e.end - e.start) / SPAN * 100).toFixed(2)}%;background:var(--${e.color})" title="${e.name}, ${e.dates}" aria-label="${e.name}, ${e.dates}"></a>`;
+  const ticks = [[-500, "500 BCE", "first"], [1, "1 CE", ""], [500, "500", ""], [1000, "1000", ""], [1500, "1500", ""], [2000, "2000", "last"]];
+  return `<div class="tl">
+    <span class="tl-cap">Kingdoms and the modern state, drawn to scale</span>
+    <div class="tl-row">${ERAS.filter(e => e.row !== 2).map(seg).join("")}</div>
+    <div class="tl-row thin">${ERAS.filter(e => e.row === 2).map(seg).join("")}</div>
+    <span class="tl-cap">European colonial presence, 1505 to 1948</span>
+    <div class="tl-ticks" aria-hidden="true">${ticks.map(t => `<span class="${t[2]}" style="left:${pos(t[0])}%">${t[1]}</span>`).join("")}</div>
+  </div>`;
+}
+
+function eraList() {
+  return `<ol class="leaves">${ERAS.map((e, i) => `<li><a class="leaf" href="#era-${e.id}">
+    <span class="when"><span class="n"><i style="background:var(--${e.color})"></i>${i + 1}</span><span>${e.dates}</span></span>
+    <span class="what"><span class="cap">${e.cap}</span><span class="nm">${e.name}</span><span class="sm">${e.summary}</span></span></a></li>`).join("")}</ol>`;
+}
+
+function chips(p) {
+  return `<span class="chips"><span class="chip ${p.group}">${p.group === "heritage" ? "Heritage" : "Nature"}</span>${p.unesco.startsWith("World") ? '<span class="chip unesco">World Heritage</span>' : ""}</span>`;
+}
+function card(p) {
+  const ph = PHOTOS[p.id] ? `<img class="ph" src="img/${p.id}-sm.jpg" alt="" loading="lazy"${fit(p.id)}>` : `<span class="ph">${p.type}</span>`;
+  return `<a class="card" href="#place-${p.id}">${ph}<span class="bd">${chips(p)}<h3>${p.name}</h3><p>${p.hook}</p><span class="meta">${p.type} · ${p.region}</span></span></a>`;
+}
+function facts(rows) {
+  return `<dl class="facts">${rows.map(r => `<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join("")}</dl>`;
+}
+function pills(ids, kind) {
+  return `<div class="links">${ids.map(id => kind === "era" ? `<a class="pill" href="#era-${id}">${era(id).name}</a>` : `<a class="pill" href="#place-${id}">${place(id).name}</a>`).join("")}</div>`;
+}
+
+function viewHome() {
+  const feat = ["anuradhapura", "sigiriya", "kandy", "galle-fort", "ella", "south-coast"].map(place);
+  return `<section class="hero"><div class="wrap">
+      <span class="label">A free guide to the island's history and places</span>
+      <h1 tabindex="-1">2,500 years of history on one island.</h1>
+      <p>Sri Lanka has ancient cities, a kingdom that outlasted three empires, and coasts that traders crossed oceans to reach. Learn the story, then see where it happened.</p>
+      <div class="btns"><a class="btn btn-main" href="#story">Start with the story</a><a class="btn btn-ghost" href="#places">Explore the places</a></div>
+      <span class="credit">${credit("hero")}</span>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <h2>The story at a glance</h2>
+      <p class="prose">One capital, Anuradhapura, lasted about 1,400 years. That is longer than everything since put together. Choose any era to read its story in about five minutes.</p>
+      <p class="prose">The island's chronicles were written on strips of palm leaf, threaded together on a cord. The eras below are laid out the same way.</p>
+      ${timeline()}
+      ${eraList()}
+    </div></section>
+    <section class="section"><div class="wrap">
+      <h2>Places to start</h2>
+      <p class="prose">Every place on this site comes with its story, what you will see there and how to visit well.</p>
+      <div class="grid">${feat.map(card).join("")}</div>
+      <p><a href="#places">See all ${PLACES.length} places</a></p>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <h2>Four threads through the story</h2>
+      <div class="threads">
+        <a href="#era-anuradhapura"><h3>Masters of water</h3><p>How ancient engineers turned a dry plain into rice fields with thousands of reservoirs.</p></a>
+        <a href="#place-mihintale"><h3>The arrival of Buddhism</h3><p>A meeting on a hilltop in the 3rd century BCE that shaped everything after it.</p></a>
+        <a href="#era-colonial"><h3>Spice, coffee and tea</h3><p>Why three European powers fought over the island, and what they left behind.</p></a>
+        <a href="#places"><h3>Beaches, mountains and wildlife</h3><p>Rainforest, cloud forest, elephants, leopards and blue whales, all on one small island.</p></a>
+      </div>
+    </div></section>
+    <section class="section cta"><div class="wrap">
+      <h2>Thinking of visiting?</h2>
+      <p class="prose">When to go, how to get around and how to show respect at sacred sites, on one page.</p>
+      <a class="btn btn-green" href="#visiting">Plan a visit</a>
+    </div></section>`;
+}
+
+function viewStory() {
+  return `<div class="page-head"><div class="wrap">
+      <h1 tabindex="-1">The Story</h1>
+      <p class="lead">Eight eras, from the first islanders to 2009. Each takes about five minutes to read and links to places you can visit today.</p>
+    </div></div>
+    <section class="section"><div class="wrap">${timeline()}<p class="prose">The island's chronicles were written on strips of palm leaf, threaded together on a cord. The eras below are laid out the same way.</p>${eraList()}</div></section>
+    <section class="section"><div class="wrap">
+      <h2>Words you will meet</h2>
+      <dl class="gloss">${GLOSSARY.map(g => `<div><dt>${g[0]}.</dt> <dd>${g[1]}</dd></div>`).join("")}</dl>
+    </div></section>`;
+}
+
+function viewEra(e) {
+  const i = ERAS.indexOf(e), prev = ERAS[i - 1], next = ERAS[i + 1];
+  return `<div class="page-head"><div class="wrap">
+      <a class="back" href="#story">← The Story</a>
+      <span class="label">Era ${i + 1} of ${ERAS.length} · ${e.dates}</span>
+      <h1 tabindex="-1">${e.name}</h1>
+      <p class="lead">${e.summary}</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      ${facts(e.facts)}
+      ${e.sections.map(s => `<div class="stack prose"><h2>${s[0]}</h2>${s[1].map(p => `<p>${p}</p>`).join("")}</div>`).join("")}
+      ${e.note ? `<div class="te"><div><span class="label t">Tradition says</span><p>${e.note.t}</p></div><div><span class="label e">Evidence shows</span><p>${e.note.e}</p></div></div>` : ""}
+      <div class="stack"><h2>See it today</h2>${pills(e.places, "place")}</div>
+      <div class="prevnext">
+        ${prev ? `<a href="#era-${prev.id}">← ${prev.name}</a>` : "<span></span>"}
+        ${next ? `<a href="#era-${next.id}">${next.name} →</a>` : `<a href="#places">Explore the places →</a>`}
+      </div>
+    </div></section>`;
+}
+
+let placeFilter = "all";
+const FILTERS = [["all", "All"], ["heritage", "Heritage"], ["nature", "Nature and landscapes"], ["unesco", "World Heritage"]];
+const matches = (p, f) => f === "all" || p.group === f || (f === "unesco" && p.unesco.startsWith("World"));
+function placeGrid() {
+  return PLACES.filter(p => matches(p, placeFilter)).map(card).join("");
+}
+function viewPlaces() {
+  return `<div class="page-head"><div class="wrap">
+      <h1 tabindex="-1">Places</h1>
+      <p class="lead">Ancient cities, sacred mountains, forts, forests and beaches. Each page tells the story of the place, what you will see and how to visit.</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      <div class="filters" role="group" aria-label="Filter places">${FILTERS.map(f => `<button type="button" id="filter-${f[0]}" data-f="${f[0]}" aria-pressed="${placeFilter === f[0]}">${f[1]} (${PLACES.filter(p => matches(p, f[0])).length})</button>`).join("")}</div>
+      <div class="grid" id="place-grid">${placeGrid()}</div>
+    </div></section>`;
+}
+
+function viewPlace(p) {
+  const f = [["Region", p.region], ["Type", p.type], ["Era", p.eras.map(id => `<a href="#era-${id}">${era(id).name}</a>`).join(", ")]];
+  if (p.unesco) f.push(["UNESCO", p.unesco]);
+  return `<div class="page-head"><div class="wrap">
+      <a class="back" href="#places">← Places</a>
+      ${chips(p)}
+      <h1 tabindex="-1">${p.name}</h1>
+      <p class="lead">${p.hook}</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      ${PHOTOS[p.id] ? `<figure class="shot"><img src="img/${p.id}.jpg" alt="${PHOTOS[p.id][2]}"${fit(p.id)}><figcaption>${credit(p.id)}.${PHOTOS[p.id][4] ? " " + PHOTOS[p.id][4] : ""}</figcaption></figure>` : ""}
+      ${facts(f)}
+      <div class="stack prose"><h2>The story</h2>${p.story.map(s => `<p>${s}</p>`).join("")}</div>
+      <div class="stack prose"><h2>What you will see</h2><ul>${p.see.map(s => `<li>${s}</li>`).join("")}</ul></div>
+      <div class="stack prose"><h2>Visiting</h2><ul>${p.visit.map(s => `<li>${s}</li>`).join("")}</ul></div>
+      ${p.respect ? `<div class="stack prose"><h2>Showing respect</h2><p>${p.respect}</p></div>` : ""}
+      <div class="stack"><h2>Read the history</h2>${pills(p.eras, "era")}</div>
+      <div class="stack"><h2>Combine it with</h2>${pills(p.near, "place")}</div>
+    </div></section>`;
+}
+
+function viewCulture() {
+  return `<div class="page-head"><div class="wrap">
+      <h1 tabindex="-1">Culture</h1>
+      <p class="lead">Several peoples, four major faiths and a kitchen shaped by every trader who ever landed here.</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      <div class="stack prose"><h2>Peoples, faiths and languages</h2>
+        <p>About three-quarters of Sri Lankans are Sinhalese. Sri Lankan Tamils, most numerous in the north and east, and Muslims, often called Moors, are each roughly a tenth of the population. Hill-country Tamils, Burghers, Malays and the indigenous Vedda complete the picture.</p>
+        <p>Around seven in ten people are Buddhist. Hindus, Muslims and Christians make up the rest. The faiths overlap in daily life. Sri Pada is climbed by pilgrims of all four, and shrines to Hindu gods stand inside many Buddhist temples.</p>
+        <p>Sinhala and Tamil are the two official languages. English is widely used in business, tourism and between communities, and most road signs carry all three.</p>
+      </div>
+      <div class="stack"><h2>Festivals through the year</h2>
+        <p class="prose">Many festivals follow the moon, so their dates shift from year to year. Every full moon, called a Poya day, is a public holiday.</p>
+        <div class="scroll"><table>
+          <thead><tr><th>When</th><th>Festival</th><th>What happens</th></tr></thead>
+          <tbody>
+            <tr><td>Mid-January</td><td>Thai Pongal</td><td>Tamil harvest festival. Families boil new rice with milk until it overflows, as a sign of plenty.</td></tr>
+            <tr><td>4 February</td><td>Independence Day</td><td>Parades and flag ceremonies mark independence in 1948.</td></tr>
+            <tr><td>Mid-April</td><td>Sinhala and Tamil New Year</td><td>The whole country stops for family visits, games, sweets and rituals timed to the minute.</td></tr>
+            <tr><td>May full moon</td><td>Vesak</td><td>Marks the Buddha's birth, enlightenment and passing. Streets glow with lanterns, and free food stalls serve everyone.</td></tr>
+            <tr><td>June full moon</td><td>Poson</td><td>Celebrates the arrival of Buddhism. Pilgrims gather at Mihintale and Anuradhapura.</td></tr>
+            <tr><td>July or August</td><td>Kandy Esala Perahera</td><td>Ten nights of processions with drummers, dancers and elephants in honour of the Tooth Relic.</td></tr>
+            <tr><td>August</td><td>Nallur Festival</td><td>Weeks of ceremonies and chariot processions at Jaffna's great Hindu temple.</td></tr>
+            <tr><td>October or November</td><td>Deepavali</td><td>The Hindu festival of lights, with oil lamps, new clothes and sweets.</td></tr>
+            <tr><td>Moves each year</td><td>Ramadan and Eid</td><td>Muslims fast from dawn to dusk for a month, then celebrate with prayers and feasts.</td></tr>
+            <tr><td>25 December</td><td>Christmas</td><td>Celebrated by Christians and enjoyed widely, especially along the west coast.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="stack prose"><h2>Food</h2>
+        <p>The everyday meal is rice and curry: a mound of rice with several small dishes of vegetables, lentils, fish or meat, each spiced differently. It is traditionally eaten with the fingers of the right hand.</p>
+        <ul>
+          <li><strong>Hoppers.</strong> Bowl-shaped pancakes of fermented rice flour and coconut milk, crisp at the edge and soft in the middle. An egg hopper has an egg cooked into the base.</li>
+          <li><strong>String hoppers.</strong> Small nests of steamed rice noodles, eaten with curry and coconut sambol.</li>
+          <li><strong>Kottu.</strong> Flatbread chopped on a hot griddle with vegetables, egg and spices. You hear the blades before you see the stall.</li>
+          <li><strong>Pol sambol.</strong> Fresh grated coconut pounded with chilli, onion and lime. It goes with almost everything.</li>
+          <li><strong>Lamprais.</strong> Rice and curries baked in a banana leaf, a dish of the Dutch Burgher community.</li>
+          <li><strong>Jaffna crab curry.</strong> A fiery northern speciality made with roasted spices.</li>
+          <li><strong>Watalappam.</strong> A spiced coconut and palm-sugar custard with Malay roots.</li>
+        </ul>
+        <p>To drink there is Ceylon tea, grown in the hills since the 1860s, and the sweet water of the orange king coconut. True cinnamon is native to the island and was the spice that first drew European ships.</p>
+      </div>
+    </div></section>`;
+}
+
+function viewVisiting() {
+  return `<div class="page-head"><div class="wrap">
+      <h1 tabindex="-1">Visiting Sri Lanka</h1>
+      <p class="lead">Practical guidance that stays true from year to year. For anything that changes, such as visas, prices and opening hours, use the official links at the end.</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      ${facts([["Time zone", "UTC +5:30"], ["Languages", "Sinhala and Tamil, with English widely spoken"], ["Currency", "Sri Lankan rupee"], ["Driving", "On the left"], ["Size", "About 65,600 square kilometres, roughly the size of Ireland"]])}
+      <div class="stack"><h2>When to go</h2>
+        <p class="prose">Two monsoons bring rain to different sides of the island at different times of year. Somewhere is almost always in season.</p>
+        <div class="scroll"><table>
+          <thead><tr><th>Region</th><th>Broadly best</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>South and west coasts</td><td>November to April</td><td>The south-west monsoon brings rain and rough seas from about May to September.</td></tr>
+            <tr><td>East coast</td><td>May to September</td><td>The north-east monsoon brings rain from about December to February.</td></tr>
+            <tr><td>Cultural Triangle</td><td>Most of the year</td><td>It lies in the dry zone. The wettest months are usually October to January.</td></tr>
+            <tr><td>Hill country</td><td>January to April</td><td>Clearer skies for views and walks. It can rain at any time, and nights are cool.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="stack prose"><h2>Getting around</h2>
+        <ul>
+          <li><strong>Trains.</strong> Slow, cheap and scenic. The line from Kandy to Ella through the tea hills is a highlight in itself. Other lines run down the coast to Galle and north to Jaffna.</li>
+          <li><strong>Car with a driver.</strong> The most common way for visitors to tour. It is flexible and saves time between sites.</li>
+          <li><strong>Buses.</strong> They go everywhere and cost very little, but they are crowded and fast.</li>
+          <li><strong>Tuk-tuks.</strong> Three-wheeled taxis for short trips. Agree the fare before you set off, or use a meter.</li>
+        </ul>
+        <p>The island is small but the roads are slow. A journey of 100 kilometres can take three hours or more, so plan fewer stops and longer stays.</p>
+      </div>
+      <div class="stack prose"><h2>Respect at sacred sites</h2>
+        <ul>
+          <li>Cover your shoulders and knees at temples, kovils, mosques and churches.</li>
+          <li>Remove shoes and hats before entering. The ground can be hot, so carry socks.</li>
+          <li>Never pose for a photo with your back to a Buddha statue, and do not touch or climb on statues.</li>
+          <li>Images of the Buddha on clothing or as tattoos can cause real offence. Keep them covered.</li>
+          <li>Do not touch monks. Women should hand items to a monk without contact.</li>
+          <li>Ask before photographing people, especially at worship.</li>
+        </ul>
+      </div>
+      <div class="stack prose"><h2>A first route</h2>
+        <p>This loop follows the story roughly in order and takes about two weeks at a relaxed pace.</p>
+        <ol>
+          <li><a href="#place-anuradhapura">Anuradhapura</a> and <a href="#place-mihintale">Mihintale</a>, where the story begins.</li>
+          <li><a href="#place-sigiriya">Sigiriya</a>, <a href="#place-dambulla">Dambulla</a> and <a href="#place-polonnaruwa">Polonnaruwa</a>, with an afternoon at <a href="#place-minneriya">Minneriya</a>.</li>
+          <li><a href="#place-kandy">Kandy</a>, the last kingdom.</li>
+          <li>By train into the hills: <a href="#place-nuwara-eliya">Nuwara Eliya</a>, <a href="#place-central-highlands">Horton Plains</a> and <a href="#place-ella">Ella</a>.</li>
+          <li>Down to the coast for <a href="#place-galle-fort">Galle Fort</a> and the <a href="#place-south-coast">southern beaches</a>, or east to <a href="#place-east-coast">the east coast</a> if the season suits.</li>
+        </ol>
+      </div>
+      <div class="stack prose"><h2>Official information</h2>
+        <p>Rules and prices change. Check these before you book.</p>
+        <ul>
+          <li><a href="https://www.srilanka.travel" target="_blank" rel="noopener">Sri Lanka Tourism</a>, the official tourism site</li>
+          <li><a href="https://www.eta.gov.lk" target="_blank" rel="noopener">Electronic Travel Authorization</a>, the government visa portal</li>
+          <li><a href="https://whc.unesco.org/en/statesparties/lk" target="_blank" rel="noopener">UNESCO World Heritage Centre</a>, for the island's listed sites</li>
+        </ul>
+      </div>
+    </div></section>`;
+}
+
+function viewAbout() {
+  return `<div class="page-head"><div class="wrap">
+      <h1 tabindex="-1">About</h1>
+      <p class="lead">Uncover Sri Lanka is an independent, non-commercial guide to the island's history and places, created by <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">Shihan</a>.</p>
+    </div></div>
+    <section class="section"><div class="wrap">
+      <div class="stack prose"><h2>Why this site exists</h2>
+        <p>Sri Lanka's story is one of the longest and richest in Asia, yet it is little known outside the island. This site was made to change that, and as a way of giving something back to the country.</p>
+        <p>If it leaves you curious enough to visit, even better. Travel done with understanding and respect is good for the people who live there.</p>
+      </div>
+      <div class="stack prose"><h2>Version 1</h2>
+        <p>This is the first version of Uncover Sri Lanka. It covers eight eras of history and 21 places. More detail is planned for later versions.</p>
+      </div>
+      <div class="stack prose"><h2>How it is written</h2>
+        <ul>
+          <li><strong>Built to last.</strong> The site covers history and places, which change slowly. Prices, opening hours and visa rules are left to official sources.</li>
+          <li><strong>Legend and evidence kept apart.</strong> Where the chronicles and archaeology differ, the page says so.</li>
+          <li><strong>The whole island.</strong> Sinhalese, Tamil, Muslim, Burgher, Malay and Vedda histories all belong to the story.</li>
+          <li><strong>Nothing for sale.</strong> No hotels, tours or businesses are promoted here.</li>
+        </ul>
+      </div>
+      <div class="stack prose"><h2>Sources</h2>
+        <p>The history on this site draws on the following references.</p>
+        <ul>
+          <li><a href="https://www.britannica.com/place/Sri-Lanka/History" target="_blank" rel="noopener">Encyclopaedia Britannica</a>, History of Sri Lanka</li>
+          <li><a href="https://whc.unesco.org/en/statesparties/lk" target="_blank" rel="noopener">UNESCO World Heritage Centre</a>, site descriptions for Sri Lanka</li>
+          <li><a href="https://www.ccf.gov.lk" target="_blank" rel="noopener">Central Cultural Fund</a>, Government of Sri Lanka</li>
+          <li>K.M. de Silva, <em>A History of Sri Lanka</em></li>
+          <li>Nira Wickramasinghe, <em>Sri Lanka in the Modern Age: A History</em></li>
+          <li>The <em>Mahavamsa</em> and <em>Dipavamsa</em> chronicles, read as traditional accounts</li>
+        </ul>
+        <p>Version 1. Last reviewed in 2026.</p>
+      </div>
+      <div class="stack prose"><h2>Photo credits</h2>
+        <p>Photographs are used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash</a> and <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Pexels</a> licences, with thanks to the photographers.</p>
+        <ul>${Object.keys(PHOTOS).map(id => `<li>${id === "hero" ? "Home page" : place(id).name}: ${PHOTOS[id][5] === "pexels" ? PHOTOS[id][0] + " (Pexels)" : `<a href="${U}${PHOTOS[id][1]}" target="_blank" rel="noopener">${PHOTOS[id][0]}</a>`}</li>`).join("")}</ul>
+      </div>
+    </div></section>`;
+}
+
+const app = document.getElementById("app");
+let first = true;
+function route() {
+  const h = location.hash.slice(1) || "home";
+  let html, key = h;
+  if (h.startsWith("era-") && era(h.slice(4))) { html = viewEra(era(h.slice(4))); key = "story"; }
+  else if (h.startsWith("place-") && place(h.slice(6))) { html = viewPlace(place(h.slice(6))); key = "places"; }
+  else if (h === "story") html = viewStory();
+  else if (h === "places") html = viewPlaces();
+  else if (h === "culture") html = viewCulture();
+  else if (h === "visiting") html = viewVisiting();
+  else if (h === "about") html = viewAbout();
+  else { html = viewHome(); key = "home"; }
+  app.innerHTML = html;
+  document.querySelectorAll(".nav a").forEach(a => {
+    if (a.dataset.k === key) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
+  if (!first) {
+    window.scrollTo(0, 0);
+    const h1 = app.querySelector("h1");
+    if (h1) h1.focus({ preventScroll: true });
+  }
+  first = false;
+}
+app.addEventListener("click", ev => {
+  const b = ev.target.closest("button[data-f]");
+  if (!b) return;
+  placeFilter = b.dataset.f;
+  document.getElementById("place-grid").innerHTML = placeGrid();
+  app.querySelectorAll("button[data-f]").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.f === placeFilter)));
+});
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
